@@ -1,12 +1,12 @@
 import Aboutusbanner from "../components/AboutUsBanner";
-import Achivements from "../components/Achivements";
+import Achievements from "../components/Achievements";
 import WhyChooseUs from "../components/WhyChooseUs";
 
 function AboutUs() {
     return (
         <>
             <Aboutusbanner />
-            <Achivements />
+            <Achievements />
             <WhyChooseUs />
         </>
     )

@@ -7,7 +7,7 @@ const TermsConditionContent = () => {
                     <div className="content_info">
                         <div className="card">
                             <h3>1. Introduction</h3>
-                            <p>Welcome to <strong>CompCaribe</strong>. By accessing or using our website <a href="#">www.compcaribe.com</a>, you agree to comply with and be bound by these Terms and Conditions. Please read them carefully before using our site, services, or making any rental or purchase.</p>
+                            <p>Welcome to <strong>CompCaribe</strong>. By accessing or using our website <a href="/">www.compcaribe.com</a>, you agree to comply with and be bound by these Terms and Conditions. Please read them carefully before using our site, services, or making any rental or purchase.</p>
                             <br/>
                                 <p>If you do not agree with these terms, please do not use our website.</p>
                         </div>

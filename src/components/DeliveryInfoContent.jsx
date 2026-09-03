@@ -43,7 +43,7 @@ const DeliveryInfoContent = () => {
                     </div>
                     <div className="card mt-2">
                         <h3>Need Assistance?</h3>
-                        <p>For questions about your delivery, contact our Customer Support Team at <strong>support@compcaribe.com</strong>or call <strong>+1 849 517 2592</strong>. We’re here to help ensure your experience is smooth from start to finish.</p>
+                        <p>For questions about your delivery, contact our Customer Support Team at <strong>support@compcaribe.com</strong> or call <strong>+1 849 517 2592</strong>. We’re here to help ensure your experience is smooth from start to finish.</p>
                     </div>
                 </div>
             </section>

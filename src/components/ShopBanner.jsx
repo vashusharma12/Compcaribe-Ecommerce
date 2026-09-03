@@ -15,18 +15,18 @@ const ShopBanner = () => {
                                 </div>
                                 <div className="carousel-inner">
                                     <div className="carousel-item active">
-                                        <Link to="/shop-index" href="shop_product-grid.html"><img src="/images/shop_slide1.png" className="d-block w-100" alt=""/></Link>
+                                        <Link to="/shop-index" href="shop_product-grid.html"><img src="/images/shop_slide1.png" className="d-block w-100" alt="" /></Link>
                                     </div>
                                     <div className="carousel-item">
-                                        <Link to="/shop-index" href="shop_product-grid.html"><img src="/images/shop_slide2.png" className="d-block w-100" alt=""/></Link>
+                                        <Link to="/shop-index" href="shop_product-grid.html"><img src="/images/shop_slide2.png" className="d-block w-100" alt="" /></Link>
                                     </div>
                                     <div className="carousel-item">
-                                        <Link to="/shop-index" href="shop_product-grid.html"><img src="/images/shop_slide1.png" className="d-block w-100" alt=""/></Link>
+                                        <Link to="/shop-index" href="shop_product-grid.html"><img src="/images/shop_slide1.png" className="d-block w-100" alt="" /></Link>
                                     </div>
                                 </div>
                             </div>
-                        </div>                        
-                        <div className="promotion_banner"><Link to="/shop-index" href="shop_product-grid.html"><img src="/images/promo_banner.png" className="d-block w-100" alt=""/></Link></div>
+                        </div>
+                        <div className="promotion_banner"><Link to="/shop-index" href="shop_product-grid.html"><img src="/images/promo_banner.png" className="d-block w-100" alt="" /></Link></div>
                     </div>
                 </div>
             </section>

@@ -1,4 +1,4 @@
-const Achivements = () => {
+const Achievements = () => {
     return (
         <div>
             <section className="aboutus shop_view container">
@@ -11,4 +11,4 @@ const Achivements = () => {
     )
 }
 
-export default Achivements;
+export default Achievements;

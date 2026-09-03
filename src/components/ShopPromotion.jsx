@@ -7,12 +7,12 @@ const ShopPromotion = () => {
                         <div className="row">
                             <div className="col-md-6">
                                 <div className="promo_banner mb-3">
-                                    <a href="#"><img src="images/promo_banner1.png" alt="" /></a>
+                                    <a href=""><img src="images/promo_banner1.png" alt="" /></a>
                                 </div>
                             </div>
                             <div className="col-md-6">
                                 <div className="promo_banner mb-3">
-                                    <a href="#"><img src="images/promo_banner2.png" alt="" /></a>
+                                    <a href=""><img src="images/promo_banner2.png" alt="" /></a>
                                 </div>
                             </div>
                         </div>

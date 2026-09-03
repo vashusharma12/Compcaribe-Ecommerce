@@ -1,4 +1,4 @@
-import ContactUsBanner from "../components/ConatctUsBanner";
+import ContactUsBanner from "../components/ContactUsBanner";
 import ContactContent from "../components/ContactContent";
 
 function ContactUs() {

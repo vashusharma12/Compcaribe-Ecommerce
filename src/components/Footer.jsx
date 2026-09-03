@@ -56,24 +56,24 @@ const Footer = () => {
                         <div className="footer_col followus">
                             <h4>Follow Us</h4>
                             <ul>
-                            <li>
-                                <a href="https://www.facebook.com/" target="_blank"><i className="fa-brands fa-facebook"></i> Facebook</a>
-                            </li>
-                            <li>
-                                <a href="https://x.com/" target="_blank"><i className="fa-brands fa-x-twitter"></i> X</a>
-                            </li>
-                            <li>
-                                <a href="https://in.linkedin.com/" target="_blank"><i className="fa-brands fa-linkedin"></i> Linkedin</a>
-                            </li>
-                            <li>
-                                <a href="https://www.youtube.com/" target="_blank"><i className="fa-brands fa-youtube"></i> Youtube</a>
-                            </li>
+                                <li>
+                                    <a href="https://www.facebook.com/" target="_blank"><i className="fa-brands fa-facebook"></i> Facebook</a>
+                                </li>
+                                <li>
+                                    <a href="https://x.com/" target="_blank"><i className="fa-brands fa-x-twitter"></i> X</a>
+                                </li>
+                                <li>
+                                    <a href="https://in.linkedin.com/" target="_blank"><i className="fa-brands fa-linkedin"></i> Linkedin</a>
+                                </li>
+                                <li>
+                                    <a href="https://www.youtube.com/" target="_blank"><i className="fa-brands fa-youtube"></i> Youtube</a>
+                                </li>
                             </ul>
                         </div>
                     </div>
                 </div>
                 <div className="footer_bottom">
-                Copyright © 1996 - 2026 CompCaribe. All rights reserved.
+                    Copyright © 1996 - 2026 CompCaribe. All rights reserved.
                 </div>
             </div>
         </footer>
