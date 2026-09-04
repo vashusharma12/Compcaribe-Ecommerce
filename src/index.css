@@ -140,6 +140,7 @@ a:focus{box-shadow:inherit !important;}
 
 
 .product_page{position: relative;}
+.product_detail_page .container{overflow: hidden;}
 .product_page > .row{width: -webkit-fill-available;}
 .product_page .head {background: #f9e9ee;border-radius: 10px;padding: 10px 15px;}
 .product_page .filter_sidebar{background:#F9E9EE; border-radius:10px; padding:15px;height: -webkit-fill-available;margin-bottom: 20px;}
@@ -484,7 +485,7 @@ a:focus{box-shadow:inherit !important;}
     .dashboard-sidebar .card-body{position: relative;min-height: 100vh;padding: 50px 30px 30px;}
     .dashboard-sidebar-close {display: flex;align-items: center;justify-content: center;position: absolute;top: 20px;right: 20px;width: 42px;height: 42px;border: 0;border-radius: 50%;background: transparent;font-size: 24px;cursor: pointer;z-index: 1}
     .dashboard-sidebar-close:hover {background-color: #f1f1f1;}
-    .dashboard-toggle-btn {display: flex;flex-direction: column;align-items: center;justify-content: center;position: fixed;left: 0;top: 21%;width: 38px;padding: 12px 0;border: none;border-radius: 0 8px 8px 0;background: #1E458A;color: #fff;font-size: 11px;font-weight: 600;line-height: 1.25;cursor: pointer;z-index: 1050;animation: dashboardWiggle 3.5s ease-in-out infinite;transform-origin: left center;}
+    .dashboard-toggle-btn {display: flex;flex-direction: column;align-items: center;justify-content: center;position: fixed;left: 0;top: 30%;width: 38px;padding: 12px 0;border: none;border-radius: 0 8px 8px 0;background: #1E458A;color: #fff;font-size: 11px;font-weight: 600;line-height: 1.25;cursor: pointer;z-index: 1050;animation: dashboardWiggle 3.5s ease-in-out infinite;transform-origin: left center;}
     @keyframes dashboardWiggle {
         0%,65%,100% {transform: translateY(-50%) rotate(0deg) translateX(0);}
         68%{transform: translateY(-50%) rotate(-5deg) translateX(-2px);}
