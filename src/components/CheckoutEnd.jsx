@@ -953,7 +953,7 @@ const CheckoutEnd = () => {
                     BILLING DETAILS
                 ================================================= */}
 
-                <div className="col-md-7">
+                <div className="col-12 col-md-6 col-lg-7">
 
                     <h4 className="mb-3 fw-bold">
                         Billing Details
@@ -1410,7 +1410,7 @@ const CheckoutEnd = () => {
                     RIGHT COLUMN
                 ================================================= */}
 
-                <div className="col-md-5">
+                <div className="col-12 col-md-6 col-lg-5">
 
 
                     {/* =================================================
@@ -2134,7 +2134,7 @@ const CheckoutEnd = () => {
                                         </div>
 
 
-                                        <div className="d-flex gap-2 mt-3">
+                                        <div className="d-flex gap-2 mt-3 flex-wrap">
 
 
                                             <button

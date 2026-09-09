@@ -344,6 +344,7 @@ a:focus{box-shadow:inherit !important;}
 .dashboard-sidebar-overlay {display: none;}
 
 
+
 @media screen and (min-width: 320px) and (max-width: 767px){
 
   .header .header_top{flex-direction:column; align-items:inherit;}
@@ -420,6 +421,11 @@ a:focus{box-shadow:inherit !important;}
     overflow: hidden;
     text-overflow: ellipsis;
   }
+  .related-products .title{display: -webkit-box;
+    -webkit-line-clamp: 3; 
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;}
 
 
 }
@@ -457,7 +463,9 @@ a:focus{box-shadow:inherit !important;}
   .item_perpage{display: none !important;}
   .popular_products .product_block .product_item{width: 48%;}
   .list_view .product_item .product_img img{height: 120px;width: 120px;}
+  .list_view .product_item .product_item_link{gap: 15px;}
   .list_view .product_item button{font-size: 14px;}
+  .footer h4{font-size: 20px;margin: 10px 0px 15px 0px;}
 
 }
 @media (max-width: 768px) {

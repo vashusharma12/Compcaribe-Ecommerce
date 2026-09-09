@@ -954,12 +954,12 @@ const ProductDetail = () => {
 					</div>
 
 
-					<div className="row g-4">
+					<div className="row g-4 related-products">
 
 						{relatedProducts.map((item) => (
 
 							<div
-								className="col-lg-3 col-md-6"
+								className="col-lg-3 col-md-6 col-6"
 								key={item.id}
 							>
 
@@ -988,7 +988,7 @@ const ProductDetail = () => {
 										<div className="card-body">
 
 											<h6
-												className="fw-semibold"
+												className="fw-semibold title"
 												style={{
 													minHeight: "48px"
 												}}
