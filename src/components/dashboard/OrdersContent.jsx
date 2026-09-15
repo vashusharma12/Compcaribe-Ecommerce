@@ -416,7 +416,7 @@ const OrdersContent = () => {
 
                                                     <div>
 
-                                                        <h6 className="fw-semibold mb-1">
+                                                        <h6 className="fw-semibold mb-1 product-title">
 
                                                             {item.name}
 

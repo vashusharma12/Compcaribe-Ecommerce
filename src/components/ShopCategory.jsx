@@ -91,9 +91,6 @@ function ShopCategory() {
                                 {isHomePage
                                     ? "Rental Products"
                                     : normalizedCategory}
-                                {/* <span className="showing_item ms-2">
-                                    ({filteredProducts.length} Items)
-                                </span> */}
                             </h3>
 
                             <div className="d-flex align-items-center gap-3">

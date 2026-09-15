@@ -308,23 +308,14 @@ const ProductDetail = () => {
 	return (
 
 		<section className="product_detail_page py-5">
-
 			<div className="container">
-
 				<div className="row g-5">
-
-
 					{/* ==================================
 						LEFT COLUMN
 					================================== */}
-
 					<div className="col-lg-7">
-
-
 						{/* MAIN IMAGE */}
-
 						<div className="border rounded-4 overflow-hidden bg-white mb-3 p-2">
-
 							<img
 								src={selectedImage}
 								alt={product.name}
@@ -334,21 +325,14 @@ const ProductDetail = () => {
 									objectFit: "contain"
 								}}
 							/>
-
 						</div>
-
-
 						{/* GALLERY */}
-
 						<div className="row g-2">
-
 							{gallery.map((img, index) => (
-
 								<div
 									className="col-2"
 									key={index}
 								>
-
 									<img
 										src={img}
 										alt={product.name}
@@ -366,42 +350,24 @@ const ProductDetail = () => {
 											setSelectedImage(img)
 										}
 									/>
-
 								</div>
-
 							))}
-
 						</div>
-
 					</div>
-
-
 					{/* ==================================
 						RIGHT COLUMN
 					================================== */}
-
 					<div className="col-lg-5">
-
 						{/* BRAND */}
-
 						<span className="badge bg-success mb-3">CompCaribe</span>
-
 						{/* PRODUCT NAME */}
-
 						<h4 className="fw-bold mb-3">
-
 							{product.name}
-
 						</h4>
-
 						{/* RATING */}
-
 						<div className="d-flex align-items-center mb-3">
-
 							<div className="text-warning">
-
 								{[1, 2, 3, 4, 5].map((star) => (
-
 									<i
 										key={star}
 										className={`fa-star ${star <=
@@ -410,159 +376,84 @@ const ProductDetail = () => {
 												: "fa-regular"
 											}`}
 									></i>
-
 								))}
-
 							</div>
-
 							<span className="ms-2 text-muted">
-
 								({product.reviews || 24 } Reviews)
-
 							</span>
-
 						</div>
-
-
 						{/* PRICE */}
-
 						<div className="mb-4">
-
 							{product.oldPrice && (
-
 								<span className="text-decoration-line-through text-muted me-3 fs-5">
-
 									£{product.oldPrice}
-
 								</span>
-
 							)}
-
-
 							<span className="fs-3 fw-bold title-heading">
-
 								£
 								{product.type === "rental"
 									? finalPricePerMonth
 									: product.price}
 
 							</span>
-
-
 							{product.type === "rental" && (
-
 								<span className="ms-2 text-muted">
-
 									/ Month
-
 								</span>
-
 							)}
-
 						</div>
-
-
 						{/* AVAILABILITY */}
-
 						<div className="mb-4">
-
 							<span className="badge bg-success me-2">
-
 								In Stock
-
 							</span>
-
 							<span className="text-success">
-
 								Ready to Dispatch
-
 							</span>
-
 						</div>
-
-
 						{/* FEATURES */}
-
 						<div className="border rounded-4 p-3 mb-4 bg-white">
-
 							<h6 className="fw-bold mb-3">
-
 								Key Features
-
 							</h6>
-
-
 							<ul className="list-unstyled mb-0">
-
 								<li className="mb-2">
-
 									<i className="fa-solid fa-check text-success me-2"></i>
-
 									Genuine Product
-
 								</li>
-
-
 								<li className="mb-2">
-
 									<i className="fa-solid fa-check text-success me-2"></i>
-
 									Fast Delivery Available
-
 								</li>
-
-
 								<li className="mb-2">
-
 									<i className="fa-solid fa-check text-success me-2"></i>
-
 									Secure Online Payment
-
 								</li>
-
-
 								<li>
-
 									<i className="fa-solid fa-check text-success me-2"></i>
-
 									Warranty Included
-
 								</li>
-
 							</ul>
-
 						</div>
-
-
 						{/* ==================================
 							RENTAL OPTIONS
 						================================== */}
-
 						{product.type === "rental" && (
-
 							<>
-
 								<h5 className="fw-bold mb-3">
-
 									Select Rental Duration
-
 								</h5>
-
-
 								<div className="row g-3 mb-4">
-
 									{[
 										"1 Month",
 										"2 Months",
 										"3 Months",
 										"6 Months"
 									].map((duration) => (
-
 										<div
 											className="col-6 col-md-3"
 											key={duration}
 										>
-
 											<div
 												className={`border rounded-3 p-2 p-md-3 p-lg-4 text-center ${selectedDuration === duration
 														? "border-primary bg-light"
@@ -575,11 +466,9 @@ const ProductDetail = () => {
 													setSelectedDuration(duration)
 												}
 											>
-
 												<h6 className="mb-1">
 													{duration}
 												</h6>
-
 												<strong>
 													£
 													{Math.round(
@@ -587,35 +476,16 @@ const ProductDetail = () => {
 														durationMultiplier[duration]
 													)}
 												</strong>
-
-												<small className="text-muted d-block mt-1">
-													Per Month
-												</small>
-
+												<small className="text-muted d-block mt-1">Per Month</small>
 											</div>
-
 										</div>
-
 									))}
-
-								</div>
-							
+								</div>				
 							</>
-
 						)}
-
-
 						{/* QUANTITY */}
-
 						<div className="mb-4">
-
-							<label className="form-label fw-semibold">
-
-								Quantity
-
-							</label>
-
-
+							<label className="form-label fw-semibold">Quantity</label>
 							<input
 								type="number"
 								min="1"
@@ -627,26 +497,15 @@ const ProductDetail = () => {
 									)
 								}
 							/>
-
 						</div>
-
-
 						{/* TOTAL */}
-
 						<div className="border rounded-4 p-3 bg-light mb-4">
-
 							<div className="d-flex justify-content-between">
-
-								<span>
-									Total Price
-								</span>
-
+								<span>Total Price</span>
 								<h4 className="fw-bold mb-0">
 									£{totalPrice}
 								</h4>
-
 							</div>
-
 							{product.type === "rental" && (
 								<small className="text-muted d-block mt-1">
 									£{finalPricePerMonth}/month × {selectedMonths} month
@@ -654,17 +513,10 @@ const ProductDetail = () => {
 									{safeQuantity > 1 ? "s" : ""}
 								</small>
 							)}
-
 						</div>
-
-
 						{/* ACTION BUTTONS */}
-
 						<div className="d-grid gap-3">
-
-
 							{/* ADD TO CART */}
-
 							<button
 								className={`btn btn-lg ${product.type === "rental"
 										? "btn-rental"
@@ -672,272 +524,120 @@ const ProductDetail = () => {
 									}`}
 								onClick={handleAddToCart}
 							>
-
 								<i className="fa-solid fa-cart-shopping me-2"></i>
-
 								Add To Cart
-
 							</button>
-
-
 							{/* BUY NOW */}
-
 							<button
 								className="btn btn-outline-dark"
 								onClick={handleBuyNow}
 							>
-
 								<i className="fa-solid fa-bolt me-2"></i>
-
 								Buy Now
-
 							</button>
-
 						</div>
-
 						{/* SERVICES */}
-
 						<div className="border rounded-4 p-4 mt-4 bg-white">
-
 							<div className="d-flex mb-3">
-
 								<i className="fa-solid fa-truck-fast fs-4 me-3 text-success"></i>
-
 								<div>
-
 									<h6 className="fw-bold mb-1">
-
 										Fast Delivery
-
 									</h6>
-
 									<small className="text-muted">
-
 										Delivery within 24-48 hours.
-
 									</small>
-
 								</div>
-
 							</div>
-
-
 							<div className="d-flex mb-3">
-
 								<i className="fa-solid fa-shield-halved fs-4 me-3 text-primary"></i>
-
 								<div>
-
 									<h6 className="fw-bold mb-1">
-
 										Warranty Included
-
 									</h6>
-
 									<small className="text-muted">
-
 										Manufacturer warranty on eligible products.
-
 									</small>
-
 								</div>
-
 							</div>
-
 							<div className="d-flex">
-
 								<i className="fa-solid fa-rotate-left fs-4 me-3 text-danger"></i>
-
 								<div>
-
-									<h6 className="fw-bold mb-1">
-
-										Easy Returns
-
-									</h6>
-
-									<small className="text-muted">
-
-										30-day return policy.
-
-									</small>
-
+									<h6 className="fw-bold mb-1">Easy Returns</h6>
+									<small className="text-muted">30-day return policy.</small>
 								</div>
-
 							</div>
-
 						</div>
-
 					</div>
-
 				</div>
-
-
 				{/* ==================================
 					DESCRIPTION
 				================================== */}
 
 				<div className="row mt-5">
-
 					<div className="col-lg-12">
-
 						<div className="card border-0 shadow-sm rounded-4">
-
 							<div className="card-body p-4">
-
-								<h3 className="fw-bold mb-4">
-
-									Product Description
-
-								</h3>
-
-
+								<h3 className="fw-bold mb-4">Product Description</h3>
 								<p className="text-muted">
-
 									{product.description ||
 										"This premium quality product is designed for maximum performance and reliability. Suitable for business, office and home use. Built with high-quality components to ensure long-lasting durability and excellent user experience."}
-
 								</p>
-
-
 								<hr />
-
-
-								<h4 className="fw-bold mb-3">
-
-									Specifications
-
-								</h4>
-
-
+								<h4 className="fw-bold mb-3">Specifications</h4>
 								<div className="row">
-
 									<div className="col-md-6">
-
 										<table className="table">
-
 											<tbody>
-
 												<tr>
-
-													<th>
-														Brand
-													</th>
-
+													<th>Brand</th>
 													<td>
 														{product.brand ||
 															"CompCaribe"}
 													</td>
-
 												</tr>
-
-
 												<tr>
-
-													<th>
-														Condition
-													</th>
-
-													<td>
-														New
-													</td>
-
+													<th>Condition</th>
+													<td>New</td>
 												</tr>
-
-
 												<tr>
-
-													<th>
-														Availability
-													</th>
-
-													<td>
-														In Stock
-													</td>
-
+													<th>Availability</th>
+													<td>In Stock</td>
 												</tr>
-
 											</tbody>
-
 										</table>
-
 									</div>
-
-
 									<div className="col-md-6">
-
 										<table className="table">
-
 											<tbody>
-
 												<tr>
-
-													<th>
-														Delivery
-													</th>
-
-													<td>
-														1-2 Business Days
-													</td>
-
+													<th>Delivery</th>
+													<td>1-2 Business Days</td>
 												</tr>
-
-
 												<tr>
-
-													<th>
-														Warranty
-													</th>
-
-													<td>
-														12 Months
-													</td>
-
+													<th>Warranty</th>
+													<td>12 Months</td>
 												</tr>
-
-
 												<tr>
-
 													<th>
 														Support
 													</th>
-
-													<td>
-														24/7 Customer Support
-													</td>
-
+													<td>24/7 Customer Support</td>
 												</tr>
-
 											</tbody>
-
 										</table>
-
 									</div>
-
 								</div>
-
 							</div>
-
 						</div>
-
 					</div>
-
 				</div>
-
-
 				{/* ==================================
 					RELATED PRODUCTS
 				================================== */}
-
 				<div className="mt-5">
-
 					<div className="d-flex justify-content-between align-items-center mb-4">
-
-						<h4 className="fw-bold">
-							Related Products
-						</h4>
-
-
+						<h4 className="fw-bold">Related Products</h4>
 						<Link
 							to={
 								product.type === "rental"
@@ -946,25 +646,16 @@ const ProductDetail = () => {
 							}
 							className="btn btn-outline-secondary"
 						>
-
 							View All
-
 						</Link>
-
 					</div>
-
-
 					<div className="row g-4 related-products">
-
 						{relatedProducts.map((item) => (
-
 							<div
 								className="col-lg-3 col-md-6 col-6"
 								key={item.id}
 							>
-
 								<div className="card h-100 shadow-sm border-0 rounded-4">
-
 									<Link
 										to={
 											item.type === "rental"
@@ -973,7 +664,6 @@ const ProductDetail = () => {
 										}
 										className="text-decoration-none text-dark"
 									>
-
 										<img
 											src={item.image}
 											alt={item.name}
@@ -983,66 +673,30 @@ const ProductDetail = () => {
 												objectFit: "contain"
 											}}
 										/>
-
-
 										<div className="card-body">
-
-											<h6
-												className="fw-semibold title"
-												style={{
-													minHeight: "48px"
-												}}
-											>
-
+											<h6 className="fw-semibold product-title">
 												{item.name}
-
 											</h6>
-
-
 											<div className="d-flex justify-content-between align-items-center mt-3">
-
 												<strong className="fs-5">
-
 													£{item.price}
-
 													{item.type === "rental" && (
-
 														<small className="text-muted">
-
 															{" "}
 															/month
-
 														</small>
-
 													)}
-
 												</strong>
-
-
-												<span className="badge bg-success">
-
-													In Stock
-
-												</span>
-
+												<span className="badge bg-success">In Stock</span>
 											</div>
-
 										</div>
-
 									</Link>
-
 								</div>
-
 							</div>
-
 						))}
-
 					</div>
-
 				</div>
-
 			</div>
-
 		</section>
 
 	);
