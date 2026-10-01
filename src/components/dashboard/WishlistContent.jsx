@@ -63,17 +63,12 @@ const WishlistContent = () => {
 
             const currentUser =
                 getCurrentUser();
-
-
             setUser(
                 currentUser
             );
-
-
             setWishlist(
                 currentUser?.wishlist || []
             );
-
         };
 
 
@@ -86,7 +81,6 @@ const WishlistContent = () => {
             "wishlistUpdated",
             loadWishlist
         );
-
 
         // Same-tab user update
         window.addEventListener(
@@ -108,19 +102,14 @@ const WishlistContent = () => {
                 "wishlistUpdated",
                 loadWishlist
             );
-
-
             window.removeEventListener(
                 "userDataUpdated",
                 loadWishlist
             );
-
-
             window.removeEventListener(
                 "storage",
                 loadWishlist
             );
-
         };
 
     }, []);
@@ -523,140 +512,80 @@ const WishlistContent = () => {
     return (
 
         <div className="card shadow-sm border-0 rounded-4">
-
             <div className="card-body p-4">
-
 
                 {/* =====================================
                     HEADER
                 ===================================== */}
 
                 <div className="d-flex justify-content-between align-items-center mb-4 flex-wrap gap-2">
-
                     <div>
-
-                        <h3 className="fw-bold mb-1">
-
-                            My Wishlist
-
-                        </h3>
-
-
+                        <h3 className="fw-bold mb-1">My Wishlist</h3>
                         <p className="text-muted mb-0">
-
                             {wishlist.length > 0
-
                                 ? `${wishlist.length} saved product${wishlist.length > 1 ? "s" : ""}.`
-
                                 : "Save your favourite products for later."
-
                             }
-
                         </p>
-
                     </div>
-
-
                     {wishlist.length > 0 && (
-
                         <Link
                             to="/shop-index"
                             className="btn btn-outline-primary"
                         >
-
                             <i className="fa-solid fa-cart-shopping me-2"></i>
-
                             Continue Shopping
-
                         </Link>
-
                     )}
-
                 </div>
-
-
                 <hr />
-
 
                 {/* =====================================
                     EMPTY WISHLIST
                 ===================================== */}
 
                 {wishlist.length === 0 ? (
-
                     <div className="text-center py-5">
-
                         <i
                             className="fa-regular fa-heart text-danger mb-4"
                             style={{
                                 fontSize: "70px"
                             }}
                         ></i>
-
-
-                        <h4 className="fw-bold">
-
-                            Your Wishlist is Empty
-
-                        </h4>
-
-
-                        <p className="text-muted mb-4">
-
-                            Browse products and add
-                            your favourites to the wishlist.
-
-                        </p>
-
-
+                        <h4 className="fw-bold">Your Wishlist is Empty</h4>
+                        <p className="text-muted mb-4">Browse products and add your favourites to the wishlist.</p>
                         <Link
                             to="/shop-index"
                             className="btn btn-secondary"
                         >
-
                             Continue Shopping
-
                         </Link>
-
                     </div>
-
                 ) : (
-
 
                     /* =====================================
                        WISHLIST PRODUCTS
                     ===================================== */
 
                     <div className="row g-4">
-
                         {wishlist.map((item) => {
-
                             const isRental =
                                 item.type === "rental";
-
-
                             const isInCart =
                                 cartItems.some(
                                     (cartItem) =>
                                         cartItem.id === item.id
                                 );
-
-
                             const isPendingRemoval =
                                 pendingRemoval.includes(
                                     item.id
                                 );
-
-
                             return (
-
                                 <div
                                     className="col-xl-4 col-lg-6 col-md-6"
                                     key={item.id}
                                 >
-
-                                    <div className="card h-100 border-0 shadow rounded-4 overflow-hidden">
-
+                                    <div className="card h-100 mb-3 border-0 shadow rounded-4 overflow-hidden">
 
                                         {/* =================================
                                             PRODUCT IMAGE
@@ -669,7 +598,6 @@ const WishlistContent = () => {
                                                     : `/shop-index/product/${item.id}`
                                             }
                                         >
-
                                             <div
                                                 className="bg-white"
                                                 style={{
@@ -677,7 +605,6 @@ const WishlistContent = () => {
                                                     padding: "20px"
                                                 }}
                                             >
-
                                                 <img
                                                     src={item.image}
                                                     alt={item.name}
@@ -686,51 +613,33 @@ const WishlistContent = () => {
                                                         objectFit: "contain"
                                                     }}
                                                 />
-
                                             </div>
-
                                         </Link>
-
 
                                         {/* =================================
                                             PRODUCT DETAILS
                                         ================================= */}
 
                                         <div className="card-body wishlist-card">
-
                                             <h6 className="fw-semibold mb-2">
-
                                                 {item.name}
-
                                             </h6>
-
 
                                             {/* PRICE */}
 
                                             <div className="mb-3">
-
                                                 <span className="fs-5 fw-bold">
-
                                                     £
                                                     {Number(
                                                         item.price || 0
                                                     ).toFixed(2)}
-
                                                 </span>
-
-
                                                 {isRental && (
-
                                                     <small className="text-muted ms-1">
-
                                                         /month
-
                                                     </small>
-
                                                 )}
-
                                             </div>
-
 
                                             {/* PRODUCT TYPE */}
 
@@ -741,25 +650,19 @@ const WishlistContent = () => {
                                                         : "bg-secondary"
                                                 }`}
                                             >
-
                                                 {isRental
                                                     ? "Rental Product"
                                                     : "Shop Product"
                                                 }
-
                                             </span>
-
                                         </div>
-
 
                                         {/* =================================
                                             ACTIONS
                                         ================================= */}
 
                                         <div className="card-footer bg-white border-0 p-3">
-
                                             <div className="d-flex gap-2">
-
 
                                                 {/* =================================
                                                     ADD TO CART
@@ -784,41 +687,23 @@ const WishlistContent = () => {
                                                         isPendingRemoval
                                                     }
                                                 >
-
                                                     {isInCart ? (
-
                                                         <>
-
                                                             <i className="fa-solid fa-check me-2"></i>
-
                                                             Added
-
                                                         </>
-
                                                     ) : isPendingRemoval ? (
-
                                                         <>
-
                                                             <i className="fa-solid fa-clock me-2"></i>
-
                                                             Added — Removing...
-
                                                         </>
-
                                                     ) : (
-
                                                         <>
-
                                                             <i className="fa-solid fa-cart-shopping me-2"></i>
-
                                                             Add to Cart
-
                                                         </>
-
                                                     )}
-
                                                 </button>
-
 
                                                 {/* =================================
                                                     REMOVE
@@ -834,31 +719,18 @@ const WishlistContent = () => {
                                                     }
                                                     title="Remove from wishlist"
                                                 >
-
                                                     <i className="fa-solid fa-trash"></i>
-
                                                 </button>
-
                                             </div>
-
                                         </div>
-
                                     </div>
-
                                 </div>
-
                             );
-
                         })}
-
                     </div>
-
                 )}
-
             </div>
-
         </div>
-
     );
 
 };
