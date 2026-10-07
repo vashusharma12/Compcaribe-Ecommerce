@@ -451,7 +451,7 @@ const ProductDetail = () => {
 										"6 Months"
 									].map((duration) => (
 										<div
-											className="col-6 col-md-3"
+											className="col-6 col-sm-3"
 											key={duration}
 										>
 											<div

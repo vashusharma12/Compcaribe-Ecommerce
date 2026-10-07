@@ -7,7 +7,7 @@ const Footer = () => {
                 <div className="row">
                     <div className="col-md-12 col-lg">
                         <div className="footer_col">
-                            <h4>Need Help?</h4>
+                            <h4><i class="fa-solid fa-circle-info"></i> Need Help?</h4>
                             <ul>
                                 <li><Link to="/shop-index/faq">Frequently Asked Questions</Link></li>
                                 <li><Link to="/shop-index/contact">Contact Us</Link></li>
@@ -18,7 +18,7 @@ const Footer = () => {
                     </div>
                     <div className="col-md-12 col-lg">
                         <div className="footer_col">
-                            <h4>Information</h4>
+                            <h4><i class="fa-solid fa-folder-open"></i> Information</h4>
                             <ul>
                                 <li><Link to="/">Rental</Link></li>
                                 <li><Link to="/shop-index">Shop</Link></li>
@@ -30,7 +30,7 @@ const Footer = () => {
                     </div>
                     <div className="col-md-12 col-lg">
                         <div className="footer_col">
-                            <h4>Rental Categories</h4>
+                            <h4><i class="fa-solid fa-layer-group"></i> Rental Categories</h4>
                             <ul>
                                 <li><Link to="/laptop">Laptop Rental</Link></li>
                                 <li><Link to="/tablet">Tablet PC Rental</Link></li>
@@ -42,7 +42,7 @@ const Footer = () => {
                     </div>
                     <div className="col-md-12 col-lg">
                         <div className="footer_col">
-                            <h4>Shop Categories</h4>
+                            <h4><i class="fa-solid fa-cart-shopping"></i> Shop Categories</h4>
                             <ul>
                                 <li><Link to="/shop-index/monitor-shop">Monitors & Displays</Link></li>
                                 <li><Link to="/shop-index/desktop-shop">Desktop</Link></li>
@@ -54,7 +54,7 @@ const Footer = () => {
                     </div>
                     <div className="col-md-12 col-lg">
                         <div className="footer_col followus">
-                            <h4>Follow Us</h4>
+                            <h4><i class="fa-solid fa-user-group"></i> Follow Us</h4>
                             <ul>
                                 <li>
                                     <a href="https://www.facebook.com/" target="_blank"><i className="fa-brands fa-facebook"></i> Facebook</a>
@@ -73,7 +73,7 @@ const Footer = () => {
                     </div>
                 </div>
                 <div className="footer_bottom">
-                    Copyright © 1996 - 2026 CompCaribe. All rights reserved.
+                    Copyright © 1996 - 2026 <Link to="/">Compcaribe.</Link> All rights reserved.
                 </div>
             </div>
         </footer>
