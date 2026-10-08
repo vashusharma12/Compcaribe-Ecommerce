@@ -321,17 +321,18 @@ const OrdersContent = () => {
                                                         </small>
                                                         <div>
                                                             <small
-                                                                className={
+                                                                className={`fw-semibold ${
                                                                     item.type ===
                                                                     "rental"
-                                                                        ? "text-primary"
-                                                                        : "text-secondary"
+                                                                        ? "text-rental"
+                                                                    : "text-shop"
+                                                                }`
                                                                 }
                                                             >
                                                                 {item.type ===
                                                                 "rental"
                                                                     ? "Rental"
-                                                                    : "Shop Product"}
+                                                                    : "Shop"}
                                                             </small>
                                                         </div>
                                                     </div>
@@ -390,7 +391,7 @@ const OrdersContent = () => {
                                             order.deposit || 0
                                         ) > 0 && (
                                             <div className="d-flex justify-content-between mb-2">
-                                                <span>Refundable Deposit</span>
+                                                <span>Refundable Deposit <br/> <small>(charged for each rental product)</small></span>
                                                 <span>
                                                     £
                                                     {Number(
